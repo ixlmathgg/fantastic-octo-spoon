@@ -7,30 +7,48 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #121212;
+            color: #ffffff;
             text-align: center;
             margin: 0;
             padding: 0;
         }
         h1 {
             margin: 20px 0;
+            color: #ffffff;
+        }
+        h2 {
+            margin: 20px 0;
+            color: #ffcc00;
+            text-transform: uppercase;
+            font-size: 22px;
+            letter-spacing: 2px;
         }
         .game-list {
             margin: 20px 0;
         }
         .game-list button {
             display: block;
-            width: 200px;
+            width: 250px;
             margin: 10px auto;
             padding: 10px;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            border: 2px solid #444;
             font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .game-list button:hover {
+            background-color: #333;
+            color: #ffffff;
         }
         #game-frame {
             display: none;
             border: none;
             width: 100%;
             height: 90vh;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -38,6 +56,8 @@
 
     <h1>ixlmathgg V2 Unblocked Games</h1>
 
+    <!-- Category Section for Games -->
+    <h2>Games</h2>
     <div class="game-list">
         <button onclick="loadGame('https://ixlmathgg.github.io/kitty/')">Stickman Hook</button>
         <button onclick="loadGame('https://ixlmathgg.github.io/dog/')">Super Mario 64</button>
