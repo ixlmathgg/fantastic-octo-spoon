@@ -60,9 +60,15 @@
             border: 2px solid #444;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
+            margin-left: auto;
+            margin-right: auto;
         }
         #fullscreen-button:hover {
             background-color: #333;
+        }
+        .fullscreen-button-wrapper {
+            text-align: center;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -85,10 +91,13 @@
         <button onclick="loadGame('https://ixlmathgg.github.io/bat/')">Tunnel Rush</button>
     </div>
 
+    <!-- Game Embed -->
     <iframe id="game-frame" allowfullscreen></iframe>
 
-    <!-- Full Screen Button -->
-    <button id="fullscreen-button" onclick="goFullScreen()">Full Screen</button>
+    <!-- Full Screen Button centered below embed -->
+    <div class="fullscreen-button-wrapper">
+        <button id="fullscreen-button" onclick="goFullScreen()">Full Screen</button>
+    </div>
 
     <script>
         function loadGame(url) {
@@ -96,7 +105,7 @@
             const fullscreenButton = document.getElementById('fullscreen-button');
             iframe.src = url;
             iframe.style.display = 'block';
-            fullscreenButton.style.display = 'block';
+            fullscreenButton.style.display = 'inline-block';
         }
 
         function goFullScreen() {
@@ -105,7 +114,7 @@
                 iframe.requestFullscreen();
             } else if (iframe.mozRequestFullScreen) { // Firefox
                 iframe.mozRequestFullScreen();
-            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
                 iframe.webkitRequestFullscreen();
             } else if (iframe.msRequestFullscreen) { // IE/Edge
                 iframe.msRequestFullscreen();
