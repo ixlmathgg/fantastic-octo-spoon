@@ -15,20 +15,22 @@
         h1 {
             margin: 20px 0;
         }
-        .game-container {
-            display: inline-block;
-            margin: 20px;
+        .game-list {
+            margin: 20px 0;
         }
-        iframe {
+        .game-list button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #game-frame {
+            display: none;
             border: none;
             width: 100%;
-            height: 500px;
-            max-width: 800px;
-        }
-        @media (min-width: 800px) {
-            iframe {
-                height: 600px;
-            }
+            height: 90vh;
         }
     </style>
 </head>
@@ -36,55 +38,28 @@
 
     <h1>ixlmathgg V2 Unblocked Games</h1>
 
-    <div class="game-container">
-        <h2>Stickman Hook</h2>
-        <iframe src="https://ixlmathgg.github.io/kitty/" allowfullscreen></iframe>
+    <div class="game-list">
+        <button onclick="loadGame('https://ixlmathgg.github.io/kitty/')">Stickman Hook</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/dog/')">Super Mario 64</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/bear/')">Tiny Fishing</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/snake/')">Tap Tap Shots</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/shark/')">Drive Mad</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/zebra/')">Emulator JS</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/turtle/')">Wordle Unlimited</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/doggy/')">Fruit Ninja</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/fox/')">Rooftop Snipers</button>
+        <button onclick="loadGame('https://ixlmathgg.github.io/bat/')">Tunnel Rush</button>
     </div>
 
-    <div class="game-container">
-        <h2>Super Mario 64</h2>
-        <iframe src="https://ixlmathgg.github.io/dog/" allowfullscreen></iframe>
-    </div>
+    <iframe id="game-frame" allowfullscreen></iframe>
 
-    <div class="game-container">
-        <h2>Tiny Fishing</h2>
-        <iframe src="https://ixlmathgg.github.io/bear/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-container">
-        <h2>Tap Tap Shots</h2>
-        <iframe src="https://ixlmathgg.github.io/snake/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-container">
-        <h2>Drive Mad</h2>
-        <iframe src="https://ixlmathgg.github.io/shark/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-container">
-        <h2>Emulator JS</h2>
-        <iframe src="https://ixlmathgg.github.io/zebra/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-container">
-        <h2>Wordle Unlimited</h2>
-        <iframe src="https://ixlmathgg.github.io/turtle/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-container">
-        <h2>Fruit Ninja</h2>
-        <iframe src="https://ixlmathgg.github.io/doggy/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-container">
-        <h2>Rooftop Snipers</h2>
-        <iframe src="https://ixlmathgg.github.io/fox/" allowfullscreen></iframe>
-    </div>
-
-    <div class="game-container">
-        <h2>Tunnel Rush</h2>
-        <iframe src="https://ixlmathgg.github.io/bat/" allowfullscreen></iframe>
-    </div>
+    <script>
+        function loadGame(url) {
+            const iframe = document.getElementById('game-frame');
+            iframe.src = url;
+            iframe.style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
